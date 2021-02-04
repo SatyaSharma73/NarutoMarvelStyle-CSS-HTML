@@ -19,13 +19,10 @@ body {
   -webkit-animation: fade 6s steps(30) forwards;
           animation: fade 6s steps(30) forwards;
 }
-.img{
-  width: 100%;
 
-}
-#first {
-  position:absolute;
-  left:0px;
+img{
+  height: 1080px;
+  width: 1980px;
 }
 
 #retrigger--1:checked ~ .bg {
