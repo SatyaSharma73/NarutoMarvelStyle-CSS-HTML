@@ -4,7 +4,6 @@ body {
   overflow: hidden;
   margin: 0;
   font-family: 'Passion One', impact;
-
 }
 
 
@@ -20,9 +19,11 @@ body {
           animation: fade 6s steps(30) forwards;
 }
 
-img{
-  height: 1080px;
-  width: 1980px;
+#first {
+
+  position:absolute;
+  left:0px;
+
 }
 
 #retrigger--1:checked ~ .bg {
@@ -174,6 +175,23 @@ img{
     -webkit-transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg) scale(1);
             transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg) scale(1);
   }
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 9em;
+  letter-spacing: -0.06em;
+  -webkit-animation: hide 8s linear forwards;
+          animation: hide 8s linear forwards;
+  padding: 0 0.2em;
+  line-height: 1;
+  border: 0.02em solid black;
 }
 #retrigger--1:checked ~ .pane .logo {
   -webkit-animation-name: hide--1;
@@ -436,6 +454,24 @@ s--1 {
     visibility: visible;
   }
 }
+.buttons {
+  position: absolute;
+  z-index: 3;
+  top: 1em;
+  left: 50%;
+  width: 10em;
+  margin-left: -5em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation: button 8s linear;
+          animation: button 8s linear;
+}
 #retrigger--1:checked ~ .buttons {
   -webkit-animation-name: buttons--1;
           animation-name: buttons--1;
@@ -444,7 +480,18 @@ s--1 {
   -webkit-animation-name: buttons--2;
           animation-name: buttons--2;
 }
-
+.buttons .button {
+  padding: 0.3em 1em;
+  color: black;
+  font-size: 1.3em;
+  display: none;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.buttons .button:hover {
+  color: white;
+  background: black;
+}
 #retrigger--2:checked ~ .buttons .button--1 {
   display: block;
 }
